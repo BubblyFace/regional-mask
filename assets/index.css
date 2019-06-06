@@ -31,7 +31,7 @@
 
 .mask-block{
   position: absolute;
-  transition: all, 0.3s;
+  transition: all 0.5s cubic-bezier(.28,1.08,.59,1);
 }
 
 #controller-button {
