@@ -9,10 +9,13 @@ function initScale() {
 }
 
 
-function regionalMask(left, top, width, height, color, opacity) {
+function regionalMask(left, top, width, height, opacity, color ) {
   const mask = document.getElementById('mask');
   const maskHeight = mask.offsetHeight;
   const maskWidth = mask.offsetWidth;
+
+  color = color || '0, 0, 0';
+  opacity = opacity || 0.8;
 
   mask.addEventListener('touchstart', e => {
     e.preventDefault();
@@ -42,4 +45,18 @@ function regionalMask(left, top, width, height, color, opacity) {
   
 }
 
+function updateMask () {
+  let error;
 
+  let args = ['left', 'top', 'width', 'height', 'opacity'].map(key => {
+    let value = Number(document.getElementById('get-' + key).value);
+    if(!value) {  
+      error = true;
+      alert(key + ' cannot be null');
+    }
+    return value
+  });
+
+  console.log(...args)
+  !error && regionalMask(...args);
+}

@@ -19,7 +19,23 @@
   z-index: 20; 
 }
 
+#mask-controller {
+  position: absolute;
+  z-index: 21;
+  top: 5rem;
+  left: 5rem;
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+}
+
 .mask-block{
   position: absolute;
   transition: all, 0.3s;
+}
+
+#controller-button {
+  height: 2rem;
+  border-radius: 0.5rem;
+  background-color: rgb(131, 199, 245)
 }
