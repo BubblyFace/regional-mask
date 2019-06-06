@@ -21,4 +21,5 @@
 
 .mask-block{
   position: absolute;
+  transition: all, 0.3s;
 }
