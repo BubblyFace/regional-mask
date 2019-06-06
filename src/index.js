@@ -57,6 +57,5 @@ function updateMask () {
     return value
   });
 
-  console.log(...args)
   !error && regionalMask(...args);
 }
